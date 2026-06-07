@@ -491,6 +491,31 @@ main {
   gap: 18px;
 }
 
+.password-tips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.tip-panel {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(23, 32, 51, .07);
+}
+
+.tip-panel h3 {
+  margin: 0 0 8px;
+  font-size: 1.02rem;
+}
+
+.tip-panel p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .password-list {
   display: grid;
   gap: 10px;
@@ -865,6 +890,7 @@ body[data-page="toolkit"] .tool-grid {
   .hero,
   .activity-shell,
   .password-area,
+  .password-tips,
   .scenario-layout {
     grid-template-columns: 1fr;
   }
