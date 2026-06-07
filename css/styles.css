@@ -222,14 +222,6 @@ h1 {
   object-fit: cover;
 }
 
-.mission-strip {
-  width: min(1180px, calc(100% - 32px));
-  margin: 0 auto 28px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-
 .stat {
   background: white;
   border: 1px solid var(--line);
