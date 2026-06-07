@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Toolkit | Safety Lab</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="toolkit">
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Safety Lab home">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span>Safety Lab</span>
+      </a>
+      <div class="nav-actions">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="share.html">Share</a>
+        <a class="nav-link" href="passwords.html">Passwords</a>
+        <a class="nav-link" href="scenarios.html">Scenarios</a>
+        <a class="nav-link active" href="toolkit.html">Toolkit</a>
+        <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="true">Sound on</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="section">
+      <div class="wrap">
+        <div class="section-header">
+          <div>
+            <p class="kicker">Extra practice</p>
+            <h1 class="page-title">Privacy Toolkit</h1>
+            <p>Fast mini-tools for extra discussion: settings choices, scam clues, and a personal safety plan.</p>
+          </div>
+          <div class="score-pill"><span id="toolkitScore">0</span>/3 tools</div>
+        </div>
+
+        <div class="tool-grid">
+          <div class="tool-panel">
+            <h3>Profile privacy check</h3>
+            <p>Turn on the choices that protect a student account. Leave risky settings off.</p>
+            <div class="privacy-toggle" id="privacyToggles">
+              <button class="toggle-row" type="button" data-good="true"><span>Private profile</span><span class="switch"></span></button>
+              <button class="toggle-row" type="button" data-good="true"><span>Friends only posts</span><span class="switch"></span></button>
+              <button class="toggle-row" type="button" data-good="false"><span>Public location</span><span class="switch"></span></button>
+              <button class="toggle-row" type="button" data-good="true"><span>Ask before tagging</span><span class="switch"></span></button>
+            </div>
+            <p class="inline-feedback" id="privacyFeedback" aria-live="polite">Aim for privacy on, public location off.</p>
+          </div>
+
+          <div class="tool-panel">
+            <h3>Spot the scam</h3>
+            <p class="phish-message">Amazing! You won a free phone. Click now and enter your full name, address, phone number and password before midnight.</p>
+            <div class="spot-list" id="spotList">
+              <button class="chip" type="button">Too good to be true</button>
+              <button class="chip" type="button">Asks for password</button>
+              <button class="chip" type="button">Creates pressure</button>
+              <button class="chip" type="button">Asks for address</button>
+            </div>
+            <p class="inline-feedback" id="scamFeedback" aria-live="polite">Find all four warning signs.</p>
+          </div>
+
+          <div class="tool-panel">
+            <h3>My pause plan</h3>
+            <p>Choose one sentence you would actually use when unsure online.</p>
+            <div class="password-list">
+              <button class="scenario-action" type="button" data-plan="I will ask a trusted adult before I reply.">Ask first</button>
+              <button class="scenario-action" type="button" data-plan="I will block or report anything that feels unsafe.">Block or report</button>
+              <button class="scenario-action" type="button" data-plan="I will close the page if it asks for private information.">Close the page</button>
+            </div>
+            <p id="pausePlan" class="inline-feedback strong" aria-live="polite">Pick your safety sentence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <a class="button" href="index.html">Back home</a>
+      <p>Every action gives visual feedback and, when sound is on, an audio cue.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>

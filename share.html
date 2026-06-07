@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Safe to Share? | Safety Lab</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="share">
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Safety Lab home">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span>Safety Lab</span>
+      </a>
+      <div class="nav-actions">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="share.html">Share</a>
+        <a class="nav-link" href="passwords.html">Passwords</a>
+        <a class="nav-link" href="scenarios.html">Scenarios</a>
+        <a class="nav-link" href="toolkit.html">Toolkit</a>
+        <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="true">Sound on</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="section">
+      <div class="wrap">
+        <div class="section-header">
+          <div>
+            <p class="kicker">Activity 1</p>
+            <h1 class="page-title">Safe to Share?</h1>
+            <p>Judge each item as safe, depends, or not safe to post publicly. Some answers are tricky because context matters.</p>
+          </div>
+          <div class="score-pill"><span id="shareScore">0</span>/<span id="shareTotal">0</span> sorted</div>
+        </div>
+
+        <div class="activity-shell">
+          <div class="panel">
+            <div class="share-card" aria-live="polite">
+              <div>
+                <div class="share-label">Current item</div>
+                <div class="share-item" id="shareItem">First name</div>
+              </div>
+            </div>
+            <div class="choice-grid" aria-label="Sharing choices">
+              <button class="choice" data-choice="safe"><span class="icon">👍</span><span>Safe</span></button>
+              <button class="choice" data-choice="depends"><span class="icon">?</span><span>Depends</span></button>
+              <button class="choice" data-choice="unsafe"><span class="icon">!</span><span>Not safe</span></button>
+            </div>
+            <div class="progress-row">
+              <span id="sharePosition">Item 1 of 10</span>
+              <button class="mini-button" id="shareReset" type="button">Reset</button>
+            </div>
+            <div class="bar"><span id="shareBar"></span></div>
+          </div>
+
+          <aside class="feedback" aria-live="polite">
+            <h3 id="shareFeedbackTitle">Make a choice</h3>
+            <p id="shareFeedback">A good privacy decision often depends on who can see it, why they need it, and whether a trusted adult knows.</p>
+            <ul>
+              <li>Could someone identify you?</li>
+              <li>Could it help guess a password?</li>
+              <li>Would you be comfortable if everyone saw it?</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <a class="button" href="passwords.html">Next: Passwords</a>
+      <p>Feedback sounds: click, correct, try again, and round complete.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>

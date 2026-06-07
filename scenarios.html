@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What Would You Do? | Safety Lab</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="scenarios">
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Safety Lab home">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span>Safety Lab</span>
+      </a>
+      <div class="nav-actions">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="share.html">Share</a>
+        <a class="nav-link" href="passwords.html">Passwords</a>
+        <a class="nav-link active" href="scenarios.html">Scenarios</a>
+        <a class="nav-link" href="toolkit.html">Toolkit</a>
+        <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="true">Sound on</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="section">
+      <div class="wrap">
+        <div class="section-header">
+          <div>
+            <p class="kicker">Activity 3</p>
+            <h1 class="page-title">What Would You Do?</h1>
+            <p>Read the situation, choose a response, and build a short answer you could share in chat or say out loud.</p>
+          </div>
+          <div class="score-pill"><span id="scenarioCount">1</span>/4 cases</div>
+        </div>
+
+        <div class="scenario-layout">
+          <div class="scenario-tabs" id="scenarioTabs"></div>
+          <div class="scenario-board">
+            <h3 id="scenarioTitle">Friend request</h3>
+            <p id="scenarioText"></p>
+            <div class="scenario-actions" id="scenarioActions"></div>
+            <label for="scenarioResponse"><strong>Your response</strong></label>
+            <textarea id="scenarioResponse" placeholder="I would... because..."></textarea>
+            <div class="response-tools">
+              <button class="button primary" id="showSuggestion" type="button">Reveal good response</button>
+              <button class="mini-button" id="nextScenario" type="button">Next case</button>
+            </div>
+            <div class="feedback feedback-inline" id="scenarioFeedback">
+              <h3>Warning signs</h3>
+              <p>Look for pressure, requests for private details, strangers, links, prizes, or anything that makes you feel rushed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <a class="button" href="toolkit.html">Next: Toolkit</a>
+      <p>A calm pause is often the safest first move.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>
