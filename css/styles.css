@@ -222,27 +222,6 @@ h1 {
   object-fit: cover;
 }
 
-.stat {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 14px;
-  min-height: 94px;
-}
-
-.stat strong {
-  display: block;
-  font-size: 1.5rem;
-  line-height: 1;
-}
-
-.stat span {
-  display: block;
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: .92rem;
-}
-
 main {
   padding-bottom: 48px;
 }
@@ -899,10 +878,6 @@ body[data-page="toolkit"] .tool-grid {
     min-height: 320px;
   }
 
-  .mission-strip {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .feedback {
     position: static;
   }
@@ -915,7 +890,6 @@ body[data-page="toolkit"] .tool-grid {
   }
 
   .section-header,
-  .mission-strip,
   .tool-grid,
   .choice-grid,
   .scenario-actions {
