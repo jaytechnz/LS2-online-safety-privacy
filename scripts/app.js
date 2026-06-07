@@ -93,8 +93,31 @@ const passwords = [
   { text: "abc123", strength: 2 },
   { text: "football", strength: 3 },
   { text: "jenny123", strength: 4 },
-  { text: "PurpleTiger87!", strength: 5 },
-  { text: "IceCreamRocket42$", strength: 6 }
+  { text: "IceCreamRocket42$", strength: 5 },
+  { text: "PurpleTiger87!", strength: 6 },
+  { text: "VexaNimlo47!", strength: 7 },
+  { text: "MivloTarnuZep42$", strength: 8 }
+];
+
+const commonPasswordWords = [
+  "password",
+  "football",
+  "soccer",
+  "dragon",
+  "monkey",
+  "qwerty",
+  "abc",
+  "jenny",
+  "school",
+  "birthday",
+  "ice",
+  "cream",
+  "rocket",
+  "tiger",
+  "purple",
+  "summer",
+  "winter",
+  "welcome"
 ];
 
 const scenarios = [
@@ -233,27 +256,30 @@ function initPasswords() {
     });
     if (correct === passwords.length) {
       $("#checkRanking").textContent = "Perfect ranking";
-      setRankingFeedback("Complete. The strongest examples are longer, mixed, and harder to guess.", "correct");
+      setRankingFeedback("Complete. The strongest examples are longer, mixed, and use made-up chunks instead of obvious dictionary words.", "correct");
       sound.play("complete");
     } else {
       $("#checkRanking").textContent = `${correct} placed correctly`;
-      setRankingFeedback(`${correct} are in the right position. Look for length, numbers, symbols, and guessable words.`, "incorrect");
+      setRankingFeedback(`${correct} are in the right position. Look for length, numbers, symbols, personal clues, and dictionary words.`, "incorrect");
       sound.play("error");
     }
   }
 
   function testPassword(value) {
+    const lowerValue = value.toLowerCase();
+    const hasCommonWord = commonPasswordWords.some((word) => lowerValue.includes(word));
     const rules = {
       length: value.length >= 12,
       letters: /[a-z]/.test(value) && /[A-Z]/.test(value),
       numbers: /\d/.test(value),
       symbols: /[^A-Za-z0-9]/.test(value),
-      personal: !/(name|birthday|school|password|123|abc|jenny)/i.test(value) && value.length > 0
+      personal: !/(name|birthday|school|password|123|abc|jenny)/i.test(value) && value.length > 0,
+      dictionary: value.length > 0 && !hasCommonWord
     };
     const score = Object.values(rules).filter(Boolean).length;
-    const labels = ["Very weak", "Weak", "Getting better", "Good", "Strong", "Excellent example"];
-    const colors = ["#c7374b", "#c7374b", "#b86908", "#0d8b92", "#14845c", "#14845c"];
-    $("#meterFill").style.width = `${Math.max(8, score * 20)}%`;
+    const labels = ["Very weak", "Weak", "Getting better", "Good", "Strong", "Excellent", "Excellent example"];
+    const colors = ["#c7374b", "#c7374b", "#b86908", "#0d8b92", "#14845c", "#14845c", "#14845c"];
+    $("#meterFill").style.width = `${Math.max(8, score * 16.7)}%`;
     $("#meterFill").style.background = colors[score];
     $("#meterLabel").textContent = labels[score];
     $$("#checkList li").forEach((li) => li.classList.toggle("met", rules[li.dataset.rule]));
